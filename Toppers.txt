@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+  //write your code here
+  int t;
+  cin>>t;
+  while(t--)
+  {
+    vector<int>a;
+    int k;
+    cin>>k;
+    a.push_back(k);
+    cin>>k;
+    a.push_back(k);
+    cin>>k;
+    a.push_back(k);
+    int n;
+    cin>>n;
+    n=n-3;
+    cout<<a[0]<<" "<<a[1]<<" "<<a[2]<<" ";
+    int i=2,s;
+    while(n--)
+    {
+      s=a[i-2]+a[i-1]+a[i];
+      cout<<s<<" ";
+      a.push_back(s);
+      i++;
+    }
+    cout<<"\n";
+  }
+  
+  return 0;
+}
